@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div style="height: 1px;"></div>
+<!-- Video Background -->
+<video src="video.mp4" class="videoBackground" loop muted autoplay></video>
+<div class="videoOverlay"></div>
+<div id="main">
+
+    <!-- Form -->
+<div class="container toggleMe shown" id="countdownForm">
+    <form id="cdForm">
+        <h1>Create a Custom Countdown</h1>
+        <label for="eventTitle">Event Title</label>
+        <input type="text" id="eventTitle" placeholder="Event title" required />
+        <label for="eventTime">Event Time</label>
+        <input type="datetime-local" id="eventTime" min="2022-03-03T12:18" required />
+        <button type="submit">Start Counting!</button>
+    </form>
+</div>
+<!-- Counting Down -->
+<div class="countdown hideme toggleMe" id="countdown">
+    <h2 id="cdTitle">Title Goes Here</h2>
+    <ul>
+        <li><span id="days"></span>Days</li>
+        <li><span id="hours"></span>Hours</li>
+        <li><span id="minutes"></span>Minutes</li>
+        <li><span id="seconds"></span>Seconds</li>
+    </ul>
+    <button id="resetCd">Reset Countdown</button>
+</div>
+
+<!-- Countdown Completed -->
+<div class="complete hideme toggleMe" id="complete">
+    <div class="pyro">
+        <div class="before"></div>
+        <div class="after"></div>
+      </div>
+<h2>Countdown Complete!</h2>
+<h3>The time has come</h3>
+<button id="newCd">New Countdown</button>
+</div>
+
+
+</div>
+
+
+
+<!-- Script  -->
+<script src="script.js"></script>
+</body>
+</html>
